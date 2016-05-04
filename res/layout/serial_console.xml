@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignBottom="@+id/Button"
+        android:layout_below="@+id/Button"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/consoleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/separator"
+        android:textIsSelectable="true"
+        android:typeface="monospace" />
+
+    <ScrollView
+        android:id="@+id/demoScroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/separator" >
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/demoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/app_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/demoTitle"
+        android:text="Start"/>
+
+    <Button
+        android:id="@+id/learn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/consoleText"
+        android:layout_toRightOf="@+id/Button"
+        android:text="ラベル"/>
+
+    <Button
+        android:id="@+id/Stop"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/consoleText"
+        android:layout_toRightOf="@+id/learn"
+        android:text="Stop"/>
+
+    <Button
+        android:id="@+id/mlbutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/consoleText"
+        android:layout_toRightOf="@+id/Stop"
+        android:text="機械学習" />
+
+</RelativeLayout>
